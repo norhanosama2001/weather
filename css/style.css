@@ -1,0 +1,190 @@
+
+@font-face {
+  font-family: "ubnutu";
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+:root {
+  --trans: 400ms;
+  --trans2: 700ms;
+  --trans3: 900ms;
+  --fs-lg: 3.5rem;
+  --fs-lg2: 2rem;
+  --fs-m: 1rem;
+  --fs-logo-h1: 1rem;
+  --fs-logo-p: 0.625rem;
+  --heading-font: "Pacifico";
+  --main-font: "ubnutu";
+  --main-color: #1e202b;
+  --main-color-op: rgba(30, 32, 43, 0.6);
+  --main-color-op2: rgba(30, 32, 43, 0.8);
+  --sec-color: #323544;
+  --main-text-color: white;
+  --sec-text-color: #009ad8;
+  --border-color: #ffffff1a;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-text-color);
+  font-size: var(--fs-s);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: var(--fs-logo-h1);
+  color: var(--main-text-color);
+}
+
+::selection {
+  color: var(--main-text-color);
+  background: var(--sec-text-color);
+}
+
+.input-group {
+  background-color: var(--main-color-op2);
+}
+
+.input-group-text {
+  background-color: var(--sec-text-color);
+  color: var(--main-text-color);
+  border: none;
+}
+
+.form-control {
+  background-color: transparent;
+  color: var(--main-text-color);
+}
+
+.form-control:focus {
+  box-shadow: var(--sec-text-color);
+  background-color: transparent;
+  color: var(--main-text-color);
+}
+
+.form-control::placeholder {
+  color: gray;
+  opacity: 1; 
+}
+
+.form-control:-ms-input-placeholder {
+  color: gray;
+}
+
+.form-control::-ms-input-placeholder {
+  color: gray;
+}
+
+a,
+span {
+  color: inherit;
+  display: inline-block;
+}
+
+header .navbar {
+  background-color: var(--main-color);
+}
+
+header .navbar .container .navbar-brand .logo img {
+  width: var(--fs-lg);
+}
+
+header .navbar .container .navbar-brand .logo p {
+  font-size: var(--fs-logo-p);
+  color: var(--main-text-color);
+}
+
+header .navbar .collapse ul .nav-item {
+  margin: 0 var(--fs-m);
+}
+
+header .navbar .collapse ul .nav-item .nav-link {
+  color: var(--main-text-color);
+  padding: 1px 15px;
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+header .navbar .collapse ul .nav-item .active {
+  color: var(--sec-text-color);
+  border: 2px solid var(--sec-text-color);
+}
+
+header .navbar .collapse ul .nav-item .nav-link:hover {
+  border-color: var(--sec-text-color);
+  color: var(--sec-text-color);
+}
+
+header .navbar .container .navbar-toggler:focus {
+  border: solid 3px var(--sec-text-color);
+  box-shadow: none;
+  color: var(--sec-text-color);
+}
+
+header .navbar .container .navbar-toggler i {
+  color: var(--main-text-color);
+}
+
+header .navbar .container .navbar-toggler:focus i {
+  color: var(--sec-text-color);
+}
+
+@media screen and (max-width: 1000px) {
+  header .navbar .collapse ul {
+    margin-top: var(--fs-m);
+    background-color: var(--sec-color);
+  }
+  header .navbar .collapse ul .nav-item {
+    padding: 15px 0;
+    border-bottom: solid 1px var(--border-color);
+    margin: 0;
+  }
+  header .navbar .collapse ul .nav-item:last-child {
+    border-bottom: none;
+  }
+  header .navbar .collapse ul .nav-item .nav-link {
+    border: none;
+  }
+}
+
+footer {
+  background-color: var(--sec-color);
+}
+
+footer ul li {
+  width: 50px;
+  height: 50px;
+  color: var(--sec-text-color);
+  background-color: var(--main-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+}
+
+footer ul li:hover {
+  color: var(--main-text-color);
+  background-color: var(--sec-text-color);
+}
